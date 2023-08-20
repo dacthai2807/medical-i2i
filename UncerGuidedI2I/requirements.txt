@@ -1,0 +1,8 @@
+torch 
+jupyterlab
+torchio
+scikit-image
+scikit-learn
+torchvision
+seaborn
+utils
