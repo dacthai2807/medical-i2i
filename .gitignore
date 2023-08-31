@@ -130,12 +130,13 @@ dmypy.json
 
 GAN-based_models/APS-GAN/experiments/
 GAN-based_models/UncerGuidedI2I/ckpt/
-guided-diffusion/ckpt
+guided-diffusion/ckpt/
 EGSDE/runs
-EGSDE/pretrained_model
+EGSDE/pretrained_model/
 datasets/
-UMRL--using-Cycle-Spinning/exp
-!UMRL--using-Cycle-Spinning/datasets
+UMRL--using-Cycle-Spinning/exp/
+!UMRL--using-Cycle-Spinning/datasets/
+BBDM_folk/
 
 *.pth
 *.npy

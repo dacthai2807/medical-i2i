@@ -146,6 +146,7 @@ for id, (input_pet_img, ct_img, gt_pet_img) in enumerate(test_loader):
             single_img = test_input[idx,:,:,:].unsqueeze(0)
             count = 0
             [t1,t2,max_r,max_c] = single_img.size()
+            # print(max_r, max_c)
             N = 121
             test_inputv = single_img
             
@@ -175,8 +176,8 @@ for id, (input_pet_img, ct_img, gt_pet_img) in enumerate(test_loader):
                     count += 1
 
             tensor = torch.squeeze(tensor)
-            tensor = norm_range(tensor, None)     
-            tensor = tensor.mul(PET_MAX_PIXEL).clamp(0, PET_MAX_PIXEL)  
+            tensor = norm_range(tensor, None) 
+            tensor = (tensor - 0.5) * 2     
 
             out_path = os.path.join(opt.exp, f'input_pet/{input_pet_img[1][idx]}')
             np.savez(out_path, input_pet_img[0][idx].permute(1, 2, 0).detach().cpu().numpy())
