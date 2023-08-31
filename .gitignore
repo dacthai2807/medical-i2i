@@ -136,7 +136,6 @@ EGSDE/pretrained_model/
 datasets/
 UMRL--using-Cycle-Spinning/exp/
 !UMRL--using-Cycle-Spinning/datasets/
-BBDM_folk/
 
 *.pth
 *.npy
